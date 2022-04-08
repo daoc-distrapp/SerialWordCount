@@ -16,7 +16,12 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		File f = new File("file.txt");
+		File f = null;
+		if(args.length == 0) {
+			f = new File("file.txt");
+		} else {
+			f = new File(args[0]);
+		}
 		Map<String, Integer> total = new HashMap<String, Integer>();
 		
 		//scanner(f);
